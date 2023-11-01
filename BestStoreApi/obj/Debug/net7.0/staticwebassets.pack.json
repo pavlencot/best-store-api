@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\nedea\\source\\repos\\BestStoreApi\\BestStoreApi\\wwwroot\\images\\products\\20231031120754293.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\20231031120754293.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.BestStoreApi.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.BestStoreApi.props",
+      "PackagePath": "build\\BestStoreApi.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.BestStoreApi.props",
+      "PackagePath": "buildMultiTargeting\\BestStoreApi.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.BestStoreApi.props",
+      "PackagePath": "buildTransitive\\BestStoreApi.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

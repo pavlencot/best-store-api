@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "3sJVtsP0j7+g3+wR//s/BLOii/60BP+p3c17MNd+T6A=",
+  "Source": "BestStoreApi",
+  "BasePath": "_content/BestStoreApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "BestStoreApi\\wwwroot",
+      "Source": "BestStoreApi",
+      "ContentRoot": "C:\\Users\\nedea\\source\\repos\\BestStoreApi\\BestStoreApi\\wwwroot\\",
+      "BasePath": "_content/BestStoreApi",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\nedea\\source\\repos\\BestStoreApi\\BestStoreApi\\wwwroot\\images\\products\\20231031120754293.jpg",
+      "SourceId": "BestStoreApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nedea\\source\\repos\\BestStoreApi\\BestStoreApi\\wwwroot\\",
+      "BasePath": "_content/BestStoreApi",
+      "RelativePath": "images/products/20231031120754293.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\products\\20231031120754293.jpg"
+    }
+  ]
+}
