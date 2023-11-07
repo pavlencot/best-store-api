@@ -18,6 +18,6 @@ namespace BestStoreApi.Models
 
         public string Role { get; set; } = "";
 
-        public DateTime createdAt { get; set; } = DateTime.Now;
+        public DateTime CreatedAt { get; set; } = DateTime.Now;
     }
 }

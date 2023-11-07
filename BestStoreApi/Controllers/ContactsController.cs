@@ -1,5 +1,6 @@
 ﻿using BestStoreApi.Models;
 using BestStoreApi.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -25,6 +26,7 @@ namespace BestStoreApi.Controllers
             return Ok(listSubjects);
         }
 
+        [Authorize(Roles = "admin")]
         [HttpGet]
         public IActionResult GetContacts(int? page)
         {
@@ -57,6 +59,7 @@ namespace BestStoreApi.Controllers
             return Ok(response);
         }
 
+        [Authorize(Roles = "admin")]
         [HttpGet("{id}")]
         public IActionResult GetContact(int id)
         {
@@ -98,35 +101,37 @@ namespace BestStoreApi.Controllers
             return Ok(contact);
         }
 
-        [HttpPut("{id}")]
-        public IActionResult UpdateContact(int id, ContactDto contactDto) 
-        {
-            var subject = context.Subjects.Find(contactDto.SubjectId);
+        /* [HttpPut("{id}")]
+         public IActionResult UpdateContact(int id, ContactDto contactDto) 
+         {
+             var subject = context.Subjects.Find(contactDto.SubjectId);
 
-            if (subject == null)
-            {
-                ModelState.AddModelError("Subject", "Please select a valid subject");
-                return BadRequest(ModelState);
-            }
+             if (subject == null)
+             {
+                 ModelState.AddModelError("Subject", "Please select a valid subject");
+                 return BadRequest(ModelState);
+             }
 
-            var contact = context.Contacts.Find(id);
+             var contact = context.Contacts.Find(id);
 
-            if(contact == null)
-            {
-                return NotFound(contactDto);
-            }
+             if(contact == null)
+             {
+                 return NotFound(contactDto);
+             }
 
-            contact.Firstname = contactDto.Firstname;
-            contact.Lastname = contactDto.Lastname;
-            contact.Email = contactDto.Email;
-            contact.Phone = contactDto.Phone ?? "";
-            contact.Subject = subject;
-            contact.Message = contactDto.Message;
+             contact.Firstname = contactDto.Firstname;
+             contact.Lastname = contactDto.Lastname;
+             contact.Email = contactDto.Email;
+             contact.Phone = contactDto.Phone ?? "";
+             contact.Subject = subject;
+             contact.Message = contactDto.Message;
 
-            context.SaveChanges();
-            return Ok(contact);
-        }
+             context.SaveChanges();
+             return Ok(contact);
+         }
+ */
 
+        [Authorize(Roles = "admin")]
         [HttpDelete("{id}")]
         public IActionResult DeleteContact(int id)
         {

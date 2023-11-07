@@ -75,3 +75,7 @@ C:\Users\nedea\source\repos\BestStoreApi\BestStoreApi\obj\Debug\net7.0\BestStore
 C:\Users\nedea\source\repos\BestStoreApi\BestStoreApi\obj\Debug\net7.0\BestStoreApi.genruntimeconfig.cache
 C:\Users\nedea\source\repos\BestStoreApi\BestStoreApi\obj\Debug\net7.0\ref\BestStoreApi.dll
 C:\Users\nedea\source\repos\BestStoreApi\BestStoreApi\bin\Debug\net7.0\BestStoreApi.staticwebassets.runtime.json
+C:\Users\nedea\source\repos\BestStoreApi\BestStoreApi\bin\Debug\net7.0\Scrutor.dll
+C:\Users\nedea\source\repos\BestStoreApi\BestStoreApi\bin\Debug\net7.0\Swashbuckle.AspNetCore.Filters.dll
+C:\Users\nedea\source\repos\BestStoreApi\BestStoreApi\bin\Debug\net7.0\Swashbuckle.AspNetCore.Filters.Abstractions.dll
+C:\Users\nedea\source\repos\BestStoreApi\BestStoreApi\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

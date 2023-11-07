@@ -13,5 +13,6 @@ namespace BestStoreApi.Services
         public DbSet<Product> Products { get; set; }
         public DbSet<Subject> Subjects { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<PasswordReset> PasswordResets { get; set; }
     }
 }
