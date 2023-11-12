@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BestStoreApi.Controllers
 {
-    [Authorize(Roles = "client")]
+    [Authorize(Roles = "admin")]
     [Route("api/[controller]")]
     [ApiController]
     public class UsersController : ControllerBase

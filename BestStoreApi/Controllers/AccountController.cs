@@ -110,7 +110,7 @@ namespace BestStoreApi.Controllers
                 Email = user.Email,
                 Phone = user.Phone,
                 Address = user.Address,
-                Role = "client",
+                Role = "admin",
                 CreatedAt = DateTime.Now
             };
 
@@ -277,7 +277,7 @@ namespace BestStoreApi.Controllers
                 return 0;
             }
 
-            var claim = identity.Claims.FirstOrDefault(c => c.Type.ToLower() == "sub");
+            var claim = identity.Claims.FirstOrDefault(c => c.Type.ToLower() == "id");
             if (claim == null)
             {
                 return 0;
@@ -295,7 +295,7 @@ namespace BestStoreApi.Controllers
 
             return id;
         }
-/*
+
         [Authorize]
         [HttpGet("GetTokenClaims")]
         public IActionResult GetTokenClaims()
@@ -315,50 +315,50 @@ namespace BestStoreApi.Controllers
             }
 
             return Ok();
-        }*/
-
-       /* [Authorize]
-        [HttpGet("AuthorizeAuthenticatedUsers")]
-        public IActionResult AuthorizeAuthenticatedUsers()
-        {
-            return Ok("You are authorized");
         }
 
-        [Authorize(Roles = "admin")]
-        [HttpGet("AuthorizeAdmin")]
-        public IActionResult AuthorizeAdmin()
-        {
-            return Ok("You are authorized");
-        }
+        /* [Authorize]
+         [HttpGet("AuthorizeAuthenticatedUsers")]
+         public IActionResult AuthorizeAuthenticatedUsers()
+         {
+             return Ok("You are authorized");
+         }
 
-        [Authorize(Roles = "admin, seller")]
-        [HttpGet("AuthorizeAdminAndSeller")]
-        public IActionResult AuthorizeAdminAndSeller()
+         [Authorize(Roles = "admin")]
+         [HttpGet("AuthorizeAdmin")]
+         public IActionResult AuthorizeAdmin()
+         {
+             return Ok("You are authorized");
+         }
+
+         [Authorize(Roles = "admin, seller")]
+         [HttpGet("AuthorizeAdminAndSeller")]
+         public IActionResult AuthorizeAdminAndSeller()
+         {
+             return Ok("You are authorized");
+         }*/
+
+
+        /*[HttpGet("TestToken")]
+        public IActionResult TestToken()
         {
-            return Ok("You are authorized");
+            User user = new User()
+            {
+                Id = 2,
+                Role = "admin"
+            };
+
+            string jwt = CreateJWToken(user);
+            var response = new { JWToken = jwt };
+
+            return Ok(response);
         }*/
-
-
-        /*        [HttpGet("TestToken")]
-                public IActionResult TestToken()
-                {
-                    User user = new User()
-                    {
-                        Id = 2,
-                        Role = "admin"
-                    };
-
-                    string jwt = CreateJWToken(user);
-                    var response = new { JWToken = jwt };
-
-                    return Ok(response);
-                }*/
 
         private string CreateJWToken(User user)
         {
             List<Claim> claims = new List<Claim>()
             {
-                new Claim("sub", "" + user.Id),
+                new Claim("id", "" + user.Id),
                 new Claim("role", user.Role)
             };
 
